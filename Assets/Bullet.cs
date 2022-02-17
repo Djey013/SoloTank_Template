@@ -1,18 +1,23 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class Bullet : BaseController
 {
-    // Start is called before the first frame update
-    void Start()
+    /*
+     
+    public Rigidbody rb;
+    public GameObject bulletApparition;
+    public GameObject bulletPosition;
+    public float bulletVelocity;
+    
+    public void Fire()
     {
-        
+        //bulletPosition = new Vector3();
+        GameObject newBullet = Instantiate(bulletApparition, new Vector3(bulletPosition), Quaternion.identity);
+        rb.AddForce(0,0,bulletVelocity);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
+    */
 }

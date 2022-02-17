@@ -17,8 +17,8 @@ public class Tank : BaseController
         float rotation = Input.GetAxis("Horizontal") * speedRotation;
         transform.Rotate(0, rotation, 0);
 
-
     }
+    
     private void GetMouseDirection() //
     {
         RaycastHit hit;
@@ -31,3 +31,22 @@ public class Tank : BaseController
     
     
 }
+
+
+
+/*
+
+void Update()
+    {
+        RaycastHit Hit;
+        Debug.DrawRay(transform.position, -Vector3.forward * laserSize, Color.red);
+
+        if (Physics.Raycast(transform.position, -Vector3.forward, out Hit, laserSize))
+        {
+            Debug.Log("Alert !!!!!!!!!!");
+        }
+
+    }
+
+
+*/

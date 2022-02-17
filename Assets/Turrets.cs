@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class Turrets : BaseController
 {
-
+    public Bullet _Bullet;
+    
     public Transform tankTransform;
     public float detectionDistance;
     //private bool insTankDetected;
     public float TimeBeforeFire = 2f;
     private float timer;
 
-    private void isTankDetected()
+    public void isTankDetected()
     {
         RaycastHit hit;
         Vector3 direction = Vector3.Normalize(tankTransform.position-headTransform.position);
@@ -21,6 +22,7 @@ public class Turrets : BaseController
             {
                 Debug.DrawRay(headTransform.position,direction,Color.red, 1f);
                 Debug.Log("Y'a quelque chose !!!");
+                _Bullet.Fire();
             }
         }
     }
