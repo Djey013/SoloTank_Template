@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class Tank : BaseController
 {
-    
+    public Bullet _bullet;
     public float speed = 0;
     public float speedRotation = 0;
     
+
+    void Start()
+    {
+        
+    } 
+
     void Update()
     {
         
@@ -17,9 +23,13 @@ public class Tank : BaseController
         float rotation = Input.GetAxis("Horizontal") * speedRotation;
         transform.Rotate(0, rotation, 0);
 
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            _bullet.Fire();
+        }
     }
     
-    private void GetMouseDirection() //
+    private void GetMouseDirection() 
     {
         RaycastHit hit;
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);

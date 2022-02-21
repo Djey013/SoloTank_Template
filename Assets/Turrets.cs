@@ -8,7 +8,7 @@ public class Turrets : BaseController
     
     public Transform tankTransform;
     public float detectionDistance;
-    //private bool insTankDetected;
+    private bool insTankDetected;
     public float TimeBeforeFire = 2f;
     private float timer;
 

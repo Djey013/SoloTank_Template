@@ -1015,8 +1015,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1308638124}
-  - component: {fileID: 1308638123}
   - component: {fileID: 1308638125}
+  - component: {fileID: 1308638123}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -1039,7 +1039,7 @@ MonoBehaviour:
   headTransform: {fileID: 0}
   projectileSpawnPoint: {fileID: 0}
   projectilePrefab: {fileID: 0}
-  rb: {fileID: 1308638125}
+  rb: {fileID: 0}
   bulletApparition: {fileID: 5274158157397765374, guid: c32a8f2805f1ad04a951e8c649a66edc, type: 3}
   bulletPosition: {x: 0, y: 0, z: 0}
   bulletVelocity: 0
@@ -1356,7 +1356,7 @@ PrefabInstance:
     - target: {fileID: 2479875223094776807, guid: 425631cc8baa3f446a7d8bccf4364fed, type: 3}
       propertyPath: _Bullet
       value: 
-      objectReference: {fileID: 1308638123}
+      objectReference: {fileID: 0}
     - target: {fileID: 2479875223094776807, guid: 425631cc8baa3f446a7d8bccf4364fed, type: 3}
       propertyPath: tankTransform
       value: 
