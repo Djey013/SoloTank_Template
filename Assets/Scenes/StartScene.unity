@@ -358,6 +358,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8071371980375409777, guid: 425631cc8baa3f446a7d8bccf4364fed, type: 3}
   m_PrefabInstance: {fileID: 371781711}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &453187358 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 429646801740561028, guid: 01fb1086312535142960c9d0e5c31342, type: 3}
+  m_PrefabInstance: {fileID: 429646801186793508}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &531010196
 GameObject:
   m_ObjectHideFlags: 0
@@ -931,10 +936,8 @@ MonoBehaviour:
   headTransform: {fileID: 0}
   projectileSpawnPoint: {fileID: 0}
   projectilePrefab: {fileID: 0}
-  rb: {fileID: 0}
   bulletApparition: {fileID: 0}
-  bulletPosition: {x: 0, y: 0, z: 0}
-  bulletVelocity: 0
+  bulletPosition: {fileID: 0}
 --- !u!1 &1106137417
 GameObject:
   m_ObjectHideFlags: 0
@@ -1039,10 +1042,8 @@ MonoBehaviour:
   headTransform: {fileID: 0}
   projectileSpawnPoint: {fileID: 0}
   projectilePrefab: {fileID: 0}
-  rb: {fileID: 0}
   bulletApparition: {fileID: 5274158157397765374, guid: c32a8f2805f1ad04a951e8c649a66edc, type: 3}
-  bulletPosition: {x: 0, y: 0, z: 0}
-  bulletVelocity: 0
+  bulletPosition: {fileID: 453187358}
 --- !u!4 &1308638124
 Transform:
   m_ObjectHideFlags: 0
@@ -1280,6 +1281,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1747360182, guid: 01fb1086312535142960c9d0e5c31342, type: 3}
+      propertyPath: _bullet
+      value: 
+      objectReference: {fileID: 1308638123}
     - target: {fileID: 1747360182, guid: 01fb1086312535142960c9d0e5c31342, type: 3}
       propertyPath: headTransform
       value: 
