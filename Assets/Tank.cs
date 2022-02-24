@@ -17,13 +17,7 @@ public class Tank : BaseController
         
         float rotation = Input.GetAxis("Horizontal") * speedRotation;
         transform.Rotate(0, rotation, 0);
-
-        if (Input.GetAxis("Mouse X") > 0)            //
-        {
-            Debug.Log("Mous rotating in X axis");
-        }
-
-
+    
         if (Input.GetMouseButtonDown(0))            //tir bullet avec LMB
         {
             _bullet.Fire();
@@ -40,10 +34,9 @@ public class Tank : BaseController
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out hit))
         {
-            Debug.Log("screen point");
+            
         }
     }
-    
     
 }
 
@@ -51,6 +44,9 @@ public class Tank : BaseController
 
 /*
 
+-----------------------------------------------------------------------------------------------
+syntaxe Raycast
+----------------------------------------------------------------------------------------------
 void Update()
     {
         RaycastHit Hit;
@@ -65,12 +61,36 @@ void Update()
 
 
 -----------------------------------------------------------------------------------------------
+input mouse button
+----------------------------------------------------------------------------------------------
 if (Input.GetMouseButtonDown(1))
             Debug.Log("Pressed secondary button.");
 
         if (Input.GetMouseButtonDown(2))
             Debug.Log("Pressed middle click.");
 
+----------------------------------------------------------------------------------------------
+Visee avec la souris
+----------------------------------------------------------------------------------------------
+if (Input.GetAxis("Mouse X") > 0)            //
+        {
+            Debug.Log("View rotating to the right");
+        }
+
+if (Input.GetAxis("Mouse X") < 0)            //
+        {
+            Debug.Log("View rotating to the left");
+        }
+
+if (Input.GetAxis("Mouse Y") > 0)            //
+        {
+            Debug.Log("View rotating to the top");
+        }
+
+if (Input.GetAxis("Mouse Y") < 0)            //
+        {
+            Debug.Log("View rotating to the bottom");
+        }
 
 
 */
