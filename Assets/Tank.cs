@@ -1,18 +1,20 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Tank : BaseController
 {
-    public Bullet _bullet;
-    public float speed = 0;
+    public float speedMoves = 0;
     public float speedRotation = 0;
-  
+    
+    public Rigidbody rb;
+    public float bulletVelocity = 0;
 
+   
     void Update()
     {
-        
-        float direction = Input.GetAxis("Vertical") * speed;            //controle du tank
+        float direction = Input.GetAxis("Vertical") * speedMoves;            //controle du tank
         transform.Translate(0f,0f,direction*Time.deltaTime,Space.Self);
         
         float rotation = Input.GetAxis("Horizontal") * speedRotation;
@@ -20,23 +22,38 @@ public class Tank : BaseController
     
         if (Input.GetMouseButtonDown(0))            //tir bullet avec LMB
         {
-            _bullet.Fire();
+            Fire();
             Debug.Log("Fire !");
         }
        
+        GetMouseDirection();            //deplace la tourelle avec les mouvements de la souris
         
     }
     
+    
+    public void Fire()
+    {
+        GameObject newBullet = Instantiate<GameObject>(projectilePrefab, projectileSpawnPoint.position, Quaternion.identity);
+        newBullet.GetComponent<Rigidbody>().AddForce(transform.forward * bulletVelocity);
+    }
 
-    private void GetMouseDirection() 
+    
+    private void GetMouseDirection()
     {
         RaycastHit hit;
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        
         if (Physics.Raycast(ray, out hit))
         {
+            Transform objectHit = hit.transform;
+            headTransform.transform.LookAt(hit.point);
             
         }
+        
+        
     }
+    
+    
     
 }
 
@@ -49,6 +66,7 @@ syntaxe Raycast
 ----------------------------------------------------------------------------------------------
 void Update()
     {
+        int laserSize = 10;
         RaycastHit Hit;
         Debug.DrawRay(transform.position, -Vector3.forward * laserSize, Color.red);
 
@@ -64,10 +82,15 @@ void Update()
 input mouse button
 ----------------------------------------------------------------------------------------------
 if (Input.GetMouseButtonDown(1))
-            Debug.Log("Pressed secondary button.");
+    {
+        Debug.Log("Pressed secondary button");
+    }  
 
-        if (Input.GetMouseButtonDown(2))
-            Debug.Log("Pressed middle click.");
+if (Input.GetMouseButtonDown(2))
+    {
+        Debug.Log("Pressed middle click.");
+    }  
+
 
 ----------------------------------------------------------------------------------------------
 Visee avec la souris

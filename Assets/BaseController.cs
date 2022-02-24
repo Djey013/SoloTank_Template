@@ -4,11 +4,9 @@ using UnityEngine;
 
 public class BaseController : MonoBehaviour
 {
-    public Transform headTransform;
     public Transform projectileSpawnPoint;
     public GameObject projectilePrefab;
+    public Transform headTransform;
     protected Vector3 headDirection;
-
-
-
+    
 }

@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class Turrets : BaseController
 {
-    public Bullet _Bullet;
-    
+
     public Transform tankTransform;
     public float detectionDistance;
     private bool insTankDetected;
@@ -22,7 +21,7 @@ public class Turrets : BaseController
             {
                 Debug.DrawRay(headTransform.position,direction,Color.red, 1f);
                 Debug.Log("Y'a quelque chose !!!");
-                _Bullet.Fire();
+                //Fire();
             }
         }
     }
