@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Turrets : BaseController
 {
-    
+    public Tank _Tank;
     public Transform tankTransform;
     public float detectionDistance;
     private bool insTankDetected;
@@ -39,7 +39,7 @@ public class Turrets : BaseController
                 Debug.DrawRay(headTransform.position, direction * lazerSize, Color.red);
                 Debug.Log("Y'a quelque chose !!!");
 
-                if (canShoot == true) //si je peut tiré
+                if (canShoot == true) //si je peut tirer
                 {
                     StartCoroutine(FireTurret());
                     canShoot = false;
@@ -57,4 +57,6 @@ public class Turrets : BaseController
 
         canShoot = true; // je peut re-tirer
     }
+
+    
 }
