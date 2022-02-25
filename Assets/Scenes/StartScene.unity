@@ -226,6 +226,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 1106137418}
     m_Modifications:
     - target: {fileID: 2479875223094776807, guid: 425631cc8baa3f446a7d8bccf4364fed, type: 3}
+      propertyPath: lazerSize
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2479875223094776807, guid: 425631cc8baa3f446a7d8bccf4364fed, type: 3}
+      propertyPath: bulletSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2479875223094776807, guid: 425631cc8baa3f446a7d8bccf4364fed, type: 3}
       propertyPath: tankTransform
       value: 
       objectReference: {fileID: 556603684}
@@ -296,6 +304,22 @@ PrefabInstance:
     m_TransformParent: {fileID: 1106137418}
     m_Modifications:
     - target: {fileID: 2479875223094776807, guid: 425631cc8baa3f446a7d8bccf4364fed, type: 3}
+      propertyPath: _Tank
+      value: 
+      objectReference: {fileID: 1287898274}
+    - target: {fileID: 2479875223094776807, guid: 425631cc8baa3f446a7d8bccf4364fed, type: 3}
+      propertyPath: _tank
+      value: 
+      objectReference: {fileID: 1287898274}
+    - target: {fileID: 2479875223094776807, guid: 425631cc8baa3f446a7d8bccf4364fed, type: 3}
+      propertyPath: lazerSize
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2479875223094776807, guid: 425631cc8baa3f446a7d8bccf4364fed, type: 3}
+      propertyPath: bulletSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2479875223094776807, guid: 425631cc8baa3f446a7d8bccf4364fed, type: 3}
       propertyPath: tankTransform
       value: 
       objectReference: {fileID: 556603684}
@@ -309,7 +333,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8071371980375409777, guid: 425631cc8baa3f446a7d8bccf4364fed, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8071371980375409777, guid: 425631cc8baa3f446a7d8bccf4364fed, type: 3}
       propertyPath: m_LocalPosition.x
@@ -466,6 +490,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 1106137418}
     m_Modifications:
     - target: {fileID: 2479875223094776807, guid: 425631cc8baa3f446a7d8bccf4364fed, type: 3}
+      propertyPath: lazerSize
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2479875223094776807, guid: 425631cc8baa3f446a7d8bccf4364fed, type: 3}
+      propertyPath: bulletSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2479875223094776807, guid: 425631cc8baa3f446a7d8bccf4364fed, type: 3}
       propertyPath: tankTransform
       value: 
       objectReference: {fileID: 556603684}
@@ -479,7 +511,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8071371980375409777, guid: 425631cc8baa3f446a7d8bccf4364fed, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8071371980375409777, guid: 425631cc8baa3f446a7d8bccf4364fed, type: 3}
       propertyPath: m_LocalPosition.x
@@ -960,8 +992,8 @@ Transform:
   m_Children:
   - {fileID: 1871580737}
   - {fileID: 156756469}
-  - {fileID: 371781712}
   - {fileID: 662523557}
+  - {fileID: 371781712}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1059,6 +1091,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c32a8f2805f1ad04a951e8c649a66edc, type: 3}
+--- !u!114 &1287898274 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1747360182, guid: 01fb1086312535142960c9d0e5c31342, type: 3}
+  m_PrefabInstance: {fileID: 429646801186793508}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2363182ad978be4bae098ad88b99cb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1505964117
 GameObject:
   m_ObjectHideFlags: 0
@@ -1341,7 +1384,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 429646801708134663, guid: 01fb1086312535142960c9d0e5c31342, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.09
+      value: 5.46
       objectReference: {fileID: 0}
     - target: {fileID: 429646801708134663, guid: 01fb1086312535142960c9d0e5c31342, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1353,19 +1396,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 429646801708134663, guid: 01fb1086312535142960c9d0e5c31342, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.99984664
       objectReference: {fileID: 0}
     - target: {fileID: 429646801708134663, guid: 01fb1086312535142960c9d0e5c31342, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 429646801708134663, guid: 01fb1086312535142960c9d0e5c31342, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0.017514529
       objectReference: {fileID: 0}
     - target: {fileID: 429646801708134663, guid: 01fb1086312535142960c9d0e5c31342, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 429646801708134663, guid: 01fb1086312535142960c9d0e5c31342, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1373,7 +1416,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 429646801708134663, guid: 01fb1086312535142960c9d0e5c31342, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -2.007
       objectReference: {fileID: 0}
     - target: {fileID: 429646801708134663, guid: 01fb1086312535142960c9d0e5c31342, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -1399,6 +1442,14 @@ PrefabInstance:
     - target: {fileID: 2479875223094776807, guid: 425631cc8baa3f446a7d8bccf4364fed, type: 3}
       propertyPath: _Bullet
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2479875223094776807, guid: 425631cc8baa3f446a7d8bccf4364fed, type: 3}
+      propertyPath: lazerSize
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2479875223094776807, guid: 425631cc8baa3f446a7d8bccf4364fed, type: 3}
+      propertyPath: bulletSpeed
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 2479875223094776807, guid: 425631cc8baa3f446a7d8bccf4364fed, type: 3}
       propertyPath: tankTransform

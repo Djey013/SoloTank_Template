@@ -5,8 +5,15 @@ using UnityEngine;
 
 public class Bullet : BaseController
 {
-    
-    
+    private void OnCollisionEnter(Collision other)
+    {
+        Destroy(gameObject);
+
+        if (other.gameObject.CompareTag("Player"))
+        {
+            Destroy(other.gameObject);
+        }
+    }
 }
 
 

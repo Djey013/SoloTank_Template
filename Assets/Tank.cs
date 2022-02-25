@@ -19,22 +19,23 @@ public class Tank : BaseController
         
         float rotation = Input.GetAxis("Horizontal") * speedRotation;
         transform.Rotate(0, rotation, 0);
-    
-        if (Input.GetMouseButtonDown(0))            //tir bullet avec LMB
-        {
-            Fire();
-            Debug.Log("Fire !");
-        }
-       
+        
         GetMouseDirection();            //deplace la tourelle avec les mouvements de la souris
         
+        if (Input.GetMouseButtonDown(0))     //tir bullet avec LMB
+        {
+            Fire();
+        }
+        
+        
+       
     }
     
     
     public void Fire()
     {
         GameObject newBullet = Instantiate<GameObject>(projectilePrefab, projectileSpawnPoint.position, Quaternion.identity);
-        newBullet.GetComponent<Rigidbody>().AddForce(transform.forward * bulletVelocity);
+        newBullet.GetComponent<Rigidbody>().AddForce(headTransform.forward * bulletVelocity);
     }
 
     
@@ -45,8 +46,10 @@ public class Tank : BaseController
         
         if (Physics.Raycast(ray, out hit))
         {
-            Transform objectHit = hit.transform;
-            headTransform.transform.LookAt(hit.point);
+            Vector3 direction = new Vector3(hit.point.x, headTransform.position.y, hit.point.z);
+            headTransform.LookAt(direction);
+            
+            headTransform.LookAt(new Vector3(hit.point.x, headTransform.position.y, hit.point.z));
             
         }
         
@@ -60,6 +63,34 @@ public class Tank : BaseController
 
 
 /*
+
+-----------------------------------------------------------------------------------------------
+test pour raycast - origine : doc unity
+----------------------------------------------------------------------------------------------
+
+// Apply a force to a rigidbody in the Scene at the point
+    // where it is clicked.
+
+    // The force with which the target is "poked" when hit.
+    float pokeForce;
+
+    void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            RaycastHit hit;
+            var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+            if (Physics.Raycast(ray, out hit))
+            {
+                if (hit.rigidbody != null)
+                {
+                    hit.rigidbody.AddForceAtPosition(ray.direction * pokeForce, hit.point);
+                }
+            }
+        }
+    }
+
 
 -----------------------------------------------------------------------------------------------
 syntaxe Raycast
