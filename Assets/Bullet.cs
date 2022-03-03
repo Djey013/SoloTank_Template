@@ -7,7 +7,12 @@ using UnityEngine.UI;
 public class Bullet : BaseController
 {
     public GameObject messageDestruction;
-    
+
+    private void Start()
+    {
+        messageDestruction = UIManager.instance.textAlert;
+    }
+
     private void OnCollisionEnter(Collision other)
     {
         Destroy(gameObject);
@@ -22,9 +27,17 @@ public class Bullet : BaseController
         {
             Destroy(other.gameObject);
             Debug.Log("[TANK] : Tourelle détruite !");
-            messageDestruction.SetActive(true); 
+            StartCoroutine(MessageDestruction());
         }
     }
+
+    IEnumerator MessageDestruction()
+    {
+        messageDestruction.SetActive(true);
+        yield return new WaitForSeconds(2);
+        messageDestruction.SetActive(false);
+    }
+    
 }
 
 
