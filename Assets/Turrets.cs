@@ -37,7 +37,7 @@ public class Turrets : BaseController
             if (hit.collider.gameObject.GetComponentInParent<Tank>() != null)
             {
                 Debug.DrawRay(headTransform.position, direction * lazerSize, Color.red);
-                Debug.Log("Y'a quelque chose !!!");
+                Debug.Log("[TOURELLE] : Y'a quelque chose !!!");
 
                 if (canShoot == true) //si je peut tirer
                 {

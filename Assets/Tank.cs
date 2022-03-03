@@ -27,8 +27,6 @@ public class Tank : BaseController
             Fire();
         }
         
-        
-       
     }
     
     
@@ -36,6 +34,7 @@ public class Tank : BaseController
     {
         GameObject newBullet = Instantiate<GameObject>(projectilePrefab, projectileSpawnPoint.position, Quaternion.identity);
         newBullet.GetComponent<Rigidbody>().AddForce(headTransform.forward * bulletVelocity);
+        
     }
 
     
@@ -50,11 +49,11 @@ public class Tank : BaseController
             headTransform.LookAt(direction);
             
             headTransform.LookAt(new Vector3(hit.point.x, headTransform.position.y, hit.point.z));
-            
+          
         }
         
-        
     }
+    
     
     
     
@@ -64,87 +63,9 @@ public class Tank : BaseController
 
 /*
 
------------------------------------------------------------------------------------------------
-test pour raycast - origine : doc unity
-----------------------------------------------------------------------------------------------
-
-// Apply a force to a rigidbody in the Scene at the point
-    // where it is clicked.
-
-    // The force with which the target is "poked" when hit.
-    float pokeForce;
-
-    void Update()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            RaycastHit hit;
-            var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-            if (Physics.Raycast(ray, out hit))
-            {
-                if (hit.rigidbody != null)
-                {
-                    hit.rigidbody.AddForceAtPosition(ray.direction * pokeForce, hit.point);
-                }
-            }
-        }
-    }
-
-
------------------------------------------------------------------------------------------------
-syntaxe Raycast
-----------------------------------------------------------------------------------------------
-void Update()
-    {
-        int laserSize = 10;
-        RaycastHit Hit;
-        Debug.DrawRay(transform.position, -Vector3.forward * laserSize, Color.red);
-
-        if (Physics.Raycast(transform.position, -Vector3.forward, out Hit, laserSize))
-        {
-            Debug.Log("Alert !!!!!!!!!!");
-        }
-
-    }
-
-
------------------------------------------------------------------------------------------------
-input mouse button
-----------------------------------------------------------------------------------------------
-if (Input.GetMouseButtonDown(1))
-    {
-        Debug.Log("Pressed secondary button");
-    }  
-
-if (Input.GetMouseButtonDown(2))
-    {
-        Debug.Log("Pressed middle click.");
-    }  
-
-
-----------------------------------------------------------------------------------------------
-Visee avec la souris
-----------------------------------------------------------------------------------------------
-if (Input.GetAxis("Mouse X") > 0)            //
-        {
-            Debug.Log("View rotating to the right");
-        }
-
-if (Input.GetAxis("Mouse X") < 0)            //
-        {
-            Debug.Log("View rotating to the left");
-        }
-
-if (Input.GetAxis("Mouse Y") > 0)            //
-        {
-            Debug.Log("View rotating to the top");
-        }
-
-if (Input.GetAxis("Mouse Y") < 0)            //
-        {
-            Debug.Log("View rotating to the bottom");
-        }
+1. destruction des turret
+2. interface 
+3. autolock //avec lookat
 
 
 */
