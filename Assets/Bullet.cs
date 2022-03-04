@@ -8,11 +8,7 @@ public class Bullet : BaseController
 {
     public GameObject messageDestruction;
 
-    private void Start()
-    {
-        messageDestruction = UIManager.instance.textAlert;
-    }
-
+    
     private void OnCollisionEnter(Collision other)
     {
         Destroy(gameObject);
@@ -37,7 +33,12 @@ public class Bullet : BaseController
         yield return new WaitForSeconds(2);
         messageDestruction.SetActive(false);
     }
-    
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if()
+    }
 }
 
 
