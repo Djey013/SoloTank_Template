@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Turret
+  - TriggerBox
+  - TriggerBox1
+  - TriggerBox2
+  - TriggerBox3
   layers:
   - Default
   - TransparentFX

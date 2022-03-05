@@ -64,8 +64,9 @@ public class Tank : BaseController
 /*
 
 1. destruction des turret
-2. interface 
-3. autolock //avec lookat
+2. message de destrcution
+3. interface 
+4. autolock //avec lookat
 
 
 */
