@@ -9,6 +9,7 @@ TagManager:
   - TriggerBox1
   - TriggerBox2
   - TriggerBox3
+  - Bullet
   layers:
   - Default
   - TransparentFX

@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class Turrets : BaseController
 {
@@ -14,7 +16,8 @@ public class Turrets : BaseController
     public float lazerSize;
     public bool canShoot = true;
     public float bulletSpeed = 1000f;
-    
+    public Text turret;
+
     private void Update()
     {
         if (tankTransform != null)  //tant que le tank est vivant
@@ -58,5 +61,6 @@ public class Turrets : BaseController
         canShoot = true; // je peut re-tirer
     }
 
-    
+   
+
 }

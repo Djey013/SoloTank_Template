@@ -182,6 +182,7 @@ MonoBehaviour:
   lazerSize: 0
   canShoot: 1
   bulletSpeed: 1000
+  turret: {fileID: 0}
 --- !u!65 &-3296193771735869948
 BoxCollider:
   m_ObjectHideFlags: 0

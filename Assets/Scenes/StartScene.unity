@@ -328,7 +328,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 287886275}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -408,7 +408,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d261dc68d00a2d7488d55255e7009f7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  messageInfo: {fileID: 1336564607}
+  popUpMessage: {fileID: 1336564606}
+  messageLog: "Tourelle 3 d\xE9truite"
 --- !u!1 &340068434
 GameObject:
   m_ObjectHideFlags: 0
@@ -437,7 +438,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 340068434}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -517,7 +518,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d261dc68d00a2d7488d55255e7009f7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  messageInfo: {fileID: 1336564607}
+  popUpMessage: {fileID: 1336564606}
+  messageLog: "Tourelle 2 d\xE9truite"
 --- !u!1001 &371781711
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -608,85 +610,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8071371980375409777, guid: 425631cc8baa3f446a7d8bccf4364fed, type: 3}
   m_PrefabInstance: {fileID: 371781711}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &486195020
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 486195023}
-  - component: {fileID: 486195022}
-  - component: {fileID: 486195021}
-  m_Layer: 5
-  m_Name: Message destruction
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &486195021
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 486195020}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.8867924, g: 0.071110725, b: 0.071110725, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
-    m_FontStyle: 3
-    m_BestFit: 0
-    m_MinSize: 3
-    m_MaxSize: 40
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: "Cible d\xE9truite !"
---- !u!222 &486195022
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 486195020}
-  m_CullTransparentMesh: 1
---- !u!224 &486195023
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 486195020}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 510579772}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 399, y: -235}
-  m_SizeDelta: {x: 218.9257, y: 63.8413}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &504449757
 GameObject:
   m_ObjectHideFlags: 0
@@ -715,7 +638,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 504449757}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -795,7 +718,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d261dc68d00a2d7488d55255e7009f7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  messageInfo: {fileID: 1336564607}
+  popUpMessage: {fileID: 1336564606}
+  messageLog: "Tourelle 4 d\xE9truite"
 --- !u!1 &510579771
 GameObject:
   m_ObjectHideFlags: 0
@@ -826,7 +750,6 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 486195023}
   - {fileID: 1241623754}
   - {fileID: 1336564609}
   m_Father: {fileID: 1175614800}
@@ -1642,7 +1565,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d261dc68d00a2d7488d55255e7009f7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  messageInfo: {fileID: 1336564607}
+  popUpMessage: {fileID: 1336564606}
+  messageLog: "Tourelle 1 d\xE9truite"
 --- !u!1 &1175614799
 GameObject:
   m_ObjectHideFlags: 0
@@ -1729,6 +1653,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bullet
       objectReference: {fileID: 0}
+    - target: {fileID: 5274158157397765374, guid: c32a8f2805f1ad04a951e8c649a66edc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8183373704301984209, guid: c32a8f2805f1ad04a951e8c649a66edc, type: 3}
       propertyPath: test
       value: 
@@ -1773,7 +1701,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 510579772}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1241623755
 MonoBehaviour:
@@ -1837,7 +1765,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1336564607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1892,12 +1820,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 510579772}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 176, y: -224.6697}
-  m_SizeDelta: {x: 246.6175, y: 79.6607}
+  m_AnchoredPosition: {x: 319.34613, y: -218.14873}
+  m_SizeDelta: {x: 275.3098, y: 66.6188}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1505964117
 GameObject:

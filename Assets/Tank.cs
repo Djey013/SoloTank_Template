@@ -41,9 +41,9 @@ public class Tank : BaseController
     private void GetMouseDirection()
     {
         RaycastHit hit;
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition); //point d'écran vers position du curseur souris
         
-        if (Physics.Raycast(ray, out hit))
+        if (Physics.Raycast(ray, out hit)) //hit recupere tout ce que le raycast touche
         {
             Vector3 direction = new Vector3(hit.point.x, headTransform.position.y, hit.point.z);
             headTransform.LookAt(direction);
