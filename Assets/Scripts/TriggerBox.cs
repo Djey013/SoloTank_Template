@@ -27,8 +27,7 @@ public class TriggerBox : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
         popUpMessage.gameObject.SetActive(false);
-        Destroy(this.gameObject);
-
+        
     }
 
 

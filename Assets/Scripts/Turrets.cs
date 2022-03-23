@@ -32,7 +32,7 @@ public class Turrets : BaseController
     {
         RaycastHit hit;
 
-        Vector3 direction = Vector3.Normalize(tankTransform.position - headTransform.position); // delta entre le tank et la tourelle
+        Vector3 direction = Vector3.Normalize(tankTransform.position - headTransform.position); // delta entre le tank et la tourelle (pour implementer une direction au raycast)
 
         if (Physics.Raycast(headTransform.position, direction, out hit, detectionDistance))
         {
