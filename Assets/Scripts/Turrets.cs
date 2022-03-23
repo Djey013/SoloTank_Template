@@ -17,17 +17,20 @@ public class Turrets : BaseController
     public float lazerSize;
     public bool canShoot = true;
     public float bulletSpeed = 1000f;
-    public Text turret;
-
+   
+    
     
     private void Update()
     {
+        
         if (tankTransform != null)  //tant que le tank est vivant
         {
             isTankDetected();
         } 
     }
 
+    
+   
     public void isTankDetected()
     {
         RaycastHit hit;
@@ -39,7 +42,7 @@ public class Turrets : BaseController
             gameObject.transform.LookAt(new Vector3(tankTransform.position.x, 0, tankTransform.position.z)); //la tourelle regarde le tank
             
             
-            if (hit.collider.gameObject.GetComponentInParent<Tank>() != null)
+            if (hit.collider.gameObject.GetComponentInParent<Tank>() != null)                       // fait apparaitre le lazer s'il detecte le collider du tank sur une certaine distance
             {
                 Debug.DrawRay(headTransform.position, direction * lazerSize, Color.red);
                 Debug.Log("[TOURELLE] : Y'a quelque chose !!!");

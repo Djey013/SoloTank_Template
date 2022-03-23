@@ -136,8 +136,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8071371980375409777}
-  - component: {fileID: 2479875223094776807}
   - component: {fileID: -3296193771735869948}
+  - component: {fileID: 8044237295425356696}
   m_Layer: 0
   m_Name: Turret_Base
   m_TagString: Untagged
@@ -160,29 +160,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2479875223094776807
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8071371980375409776}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0e0b823b988cce40ba7bdfce9c45e19, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectileSpawnPoint: {fileID: 8071371979595550918}
-  projectilePrefab: {fileID: 5274158157397765374, guid: c32a8f2805f1ad04a951e8c649a66edc, type: 3}
-  headTransform: {fileID: 8071371980835645713}
-  _Tank: {fileID: 0}
-  tankTransform: {fileID: 0}
-  detectionDistance: 0
-  TimeBeforeFire: 2
-  lazerSize: 0
-  canShoot: 1
-  bulletSpeed: 1000
-  turret: {fileID: 0}
 --- !u!65 &-3296193771735869948
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -196,6 +173,31 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.47380397, y: 0.94938016, z: 0.43439317}
   m_Center: {x: -0.0009626597, y: 0.5045759, z: -0.0048452616}
+--- !u!114 &8044237295425356696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8071371980375409776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f09de0cd17bfd4c438baa0fd73bec3b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectileSpawnPoint: {fileID: 8071371979595550918}
+  projectilePrefab: {fileID: 5274158157397765374, guid: c32a8f2805f1ad04a951e8c649a66edc, type: 3}
+  headTransform: {fileID: 8071371980835645713}
+  _Tank: {fileID: 0}
+  tankTransform: {fileID: 0}
+  detectionDistance: 5
+  TimeBeforeFire: 2
+  lazerSize: 5
+  canShoot: 1
+  bulletSpeed: 100
+  state: 0
+  nextState: 0
+  isTankDetected: 0
 --- !u!1 &8071371980830557306
 GameObject:
   m_ObjectHideFlags: 0
